@@ -1,4 +1,3 @@
-import express from 'express';
     import cors from 'cors';
     import bodyParser from 'body-parser';
 
@@ -13,6 +12,12 @@ import express from 'express';
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
 
+    //main route
+    app.get('/',( req, res) => {  
+        let json  = {health : true};
+        res.send = json;
+        
+    }); 
     //Create a post API to be able to create a new note
 
     // let notes = [];
@@ -119,6 +124,7 @@ import express from 'express';
 
             
     const port = process.env.PORT || 3000;
+    console.log("PORT : ",port);
     app.listen(port, () => {
         console.log(`Server is running on port ${port}`);
         db.connect();
