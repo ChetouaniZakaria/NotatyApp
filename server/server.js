@@ -15,7 +15,12 @@
     //main route
     app.get('/',( req, res) => {  
         let json  = {health : true};
-        res.send = json;
+        if(json.health == true){
+            res.send = json;
+        }
+        else {
+            res.status(500).send('Server is not healthy');
+        }
         
     }); 
     //Create a post API to be able to create a new note
