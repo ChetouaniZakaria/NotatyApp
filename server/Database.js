@@ -6,6 +6,8 @@ class Database {
     constructor() {
         // this.Url = 'mongodb://localhost:27017/Notaty'; 
         this.Url = process.env.MONGODB_URL || 'mongodb+srv://admin:geoinfo@clusternotaty.gzzvhyu.mongodb.net/Notaty?retryWrites=true&w=majority&appName=ClusterNotaty';
+        // this.Url = process.env.MONGODB_URL;
+
     }
 // chetouanizakaria1
 // geoinfo
