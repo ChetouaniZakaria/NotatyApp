@@ -1,3 +1,4 @@
+    import express from 'express';
     import cors from 'cors';
     import bodyParser from 'body-parser';
 
@@ -16,11 +17,10 @@
     app.get('/',( req, res) => {  
         let json  = {health : true};
         if(json.health == true){
-            res.send = json;
+            res.send(json);
+
         }
-        else {
-            res.status(500).send('Server is not healthy');
-        }
+       
         
     }); 
     //Create a post API to be able to create a new note
